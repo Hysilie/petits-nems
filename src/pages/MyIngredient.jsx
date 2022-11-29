@@ -1,22 +1,15 @@
 /* eslint-disable */
 /* eslint-disable no-lone-blocks */
 import React, { useEffect, useState } from "react";
-import Lottie from "react-lottie";
 import IngredientCard from "../components/IngredientCard";
-import animationData from "../lotties/cook.json";
+import cook from '../assets/cook.gif';
+
 
 export default function MyIngredient() {
   const [ingredient, setIngredient] = useState();
   const [searchIngredient, setSearchIngredient] = useState();
 
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+
 
   const getIngredient = () => {
     fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`)
@@ -90,7 +83,7 @@ export default function MyIngredient() {
         </div>
       </div>
       {searchIngredient ? null : (
-        <Lottie options={defaultOptions} height={300} width={300} />
+       <img src={cook} alt="animation homme" className="h-60 mx-auto"/>
       )}
       <div className="flex flex-wrap justify-center gap-5">
         {searchIngredient?.map((dataIngredient, index) => (

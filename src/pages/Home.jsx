@@ -1,22 +1,12 @@
 /* eslint-disable import/no-named-as-default-member */
 /* eslint-disable react/prop-types */
 import React from "react";
-import Lottie from "react-lottie";
+import animationHomme from '../assets/animation_home_lottie.gif';
 /* import { useEffect, useState } from "react"; */
-import animationData from "../lotties/Animation_Home.json";
 import SearchBar from "../components/SearchBar";
 import arrowfly from "../assets/arrow-fly.svg";
 
 export default function Home({ countries, setCountries, setSearch, search }) {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-
   return (
     <main className=" h-96 my-8 bg-backgroundMain border border-transparent flex-col ">
       {/* Main content */}
@@ -29,11 +19,14 @@ export default function Home({ countries, setCountries, setSearch, search }) {
           {" "}
           <img src={arrowfly} alt="" className="w-100" />
         </div>
-        <div className="block w-100 md:hidden">
-          <Lottie options={defaultOptions} height={300} width={300} />
+        <div className="block w-100  md:hidden ">
+          <div className="flex justify-center" >
+          <img src={animationHomme} alt="" className="h-60" />
+          
         </div>
-        <div className="hidden w-100 md:block">
-          <Lottie options={defaultOptions} height={300} width={400} />
+        </div>
+        <div className="hidden w-100  md:block">
+        <img src={animationHomme} alt="" className="h-60" />
         </div>
       </div>
       {/* Search bar and arrow flight */}
