@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React, { useEffect } from "react";
 import youtube from "../assets/youtube.png";
 /* eslint-disable react/prop-types */
@@ -15,7 +16,7 @@ export default function Modal({ showModal, setShowModal, recipeDetails }) {
       }
       setIngredients([...ingredients]);
     }
-  }, [recipeDetails.length]);
+  },[recipeDetails]);
 
   return recipeDetails.length > 0 ? (
     <>

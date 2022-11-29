@@ -37,7 +37,7 @@ function RecipeCardsResults({ recipe }) {
 
   useEffect(() => {
     getRandom();
-  }, []);
+  });
 
   return (
     <div className="w-64 mb-6 md:w-96 bg-white border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
