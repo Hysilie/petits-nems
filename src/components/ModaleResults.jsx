@@ -16,6 +16,7 @@ export default function Modal({ showModal, setShowModal, recipeDetails }) {
       }
       setIngredients([...ingredients]);
     }
+    // eslint-disable-next-line
   },[recipeDetails]);
 
   return recipeDetails.length > 0 ? (
